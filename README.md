@@ -1,2 +1,1 @@
-# candan_oemer
-My Projects
+Ich möchte ein Projekt wie "Starticket" oder "Ticketcorner" erstellen. Benutzer können sich mit ihrem Benutzernamen und Passwort für das Programm anmelden und dann ihre Event auswählen, zum Beispiel Fußballspiele oder Konzerte usw.
