@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="beispiel.Views.TicketListView">
+    <ContentPage.Style>
+        <Style TargetType="ContentPage">
+            <Setter Property="BackgroundColor" Value="Green" />
+        </Style>
+    </ContentPage.Style>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="20,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" VerticalOptions="Center" TextColor="{Binding IsSelected, Converter={StaticResource ColorConverter}}" Text="{Binding Title}" />
+                                <Label Grid.Column="2" Text="!!!" TextColor="Red" VerticalOptions="Center"
+                                       HorizontalOptions="Center" IsVisible="{Binding IsOverDueDate}" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Choose" WidthRequest="100" Margin="20,0,0,0" Command="{Binding ChooseItemCommmand}"
+                    CommandParameter="{x:Reference Name=Page}" />
+            <Button Text="Add" WidthRequest="100" Margin="20,0,0,0" Command="{Binding AddTodoCommand}" />
+            <Button Text="Search" WidthRequest="100" Margin="20,0,0,0" Command="{Binding SeatchItemCommand}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

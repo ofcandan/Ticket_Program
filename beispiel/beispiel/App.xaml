@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="beispiel.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color
+                x:Key="Background">Black</Color>
+            <Color
+                x:Key="Foreground">Green</Color>
+            <Style
+                x:Key="ContentPageStyle"
+                TargetType="ContentPage">
+                <Setter
+                    Property="BackgroundColor"
+                    Value="Black" />
+            </Style>
+            <Style
+                TargetType="NavigationPage">
+                <Setter
+                    Property="BarBackgroundColor"
+                    Value="Gray" />
+                <Setter
+                    Property="BarTextColor"
+                    Value="White" />
+            </Style>
+            <Style
+                TargetType="Label">
+                <Setter
+                    Property="TextColor"
+                    Value="Red" />
+            </Style>
+            <Style
+                TargetType="Button">
+                <Setter
+                    Property="BackgroundColor"
+                    Value="AliceBlue" />
+                <Setter
+                    Property="TextColor"
+                    Value="Red" />
+                <Setter
+                    Property="HeightRequest"
+                    Value="50" />
+                <Setter
+                    Property="FontFamily"
+                    Value="comicsans">
+
+                </Setter>
+            </Style>
+            <Style
+                TargetType="ListView">
+                <Setter
+                    Property="BackgroundColor"
+                    Value="Black" />
+            </Style>
+            <Style
+                TargetType="DatePicker">
+                <Setter
+                    Property="BackgroundColor"
+                    Value="AntiqueWhite">
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
